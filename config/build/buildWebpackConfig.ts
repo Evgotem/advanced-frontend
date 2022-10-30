@@ -9,10 +9,10 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
   const { paths, mode, isDev } = options;
 
   return {
-    mode: mode,
-    entry: paths.entry, //стартовая точка приложения
+    mode,
+    entry: paths.entry, // стартовая точка приложения
     output: {
-      //папка для сборки проекта
+      // папка для сборки проекта
       filename: '[name].[contenthash].js',
       path: paths.build,
       clean: true,

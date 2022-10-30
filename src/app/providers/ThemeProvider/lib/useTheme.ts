@@ -6,7 +6,7 @@ interface UseThemeResult {
   theme: Theme;
 }
 
-//хук useTheme возвращает тему и функцию для изменения темы
+// хук useTheme возвращает тему и функцию для изменения темы
 export function useTheme(): UseThemeResult {
   const { theme, setTheme } = useContext(ThemeContext);
 

@@ -6,7 +6,8 @@ const defaultTheme = (localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme) ||
 const ThemeProvider: FC = ({ children }) => {
   const [theme, setTheme] = useState<Theme>(defaultTheme);
 
-  //чтобы компонент каждый раз не перерисовывался, выносим объект пропсов для темы в константу и мемоизируем, а не передаем напрямую в value
+  // чтобы компонент каждый раз не перерисовывался,
+  // выносим объект пропсов для темы в константу и мемоизируем, а не передаем напрямую в value
   const defaultProps = useMemo(
     () => ({
       theme,
